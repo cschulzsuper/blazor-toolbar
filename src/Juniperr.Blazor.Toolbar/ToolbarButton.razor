@@ -1,0 +1,17 @@
+﻿
+@inherits ToolbarComponentBase
+
+<ToolbarComponentEnvelop>
+    <button class="@CssIcon" title="@Title" @onclick="() => OnClick()"></button>
+</ToolbarComponentEnvelop>
+
+@code {
+    [Parameter]
+    public string CssIcon { get; set; } = null!;
+
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+
+
+    public virtual void OnClick() { }
+}

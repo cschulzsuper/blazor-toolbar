@@ -1,0 +1,10 @@
+﻿<CascadingValue Value=this>
+    <ul>
+        @ChildContent
+    </ul>
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+}

@@ -1,0 +1,19 @@
+﻿
+@inherits ToolbarComponentBase
+
+<ToolbarComponentEnvelop>
+    <a class="@CssIcon"
+       title="@Title"
+       href="@Href"></a>
+</ToolbarComponentEnvelop>
+
+@code {
+    [Parameter]
+    public string CssIcon { get; set; } = null!;
+
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Href { get; set; } = string.Empty;
+}
