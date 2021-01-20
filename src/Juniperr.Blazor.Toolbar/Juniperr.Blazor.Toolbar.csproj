@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+      <TargetFramework>net5.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+
+	  <Authors>Christian Schulz</Authors>
+	  <Company></Company>
+	  <Copyright>Copyright 2021 (c) Christian Schulz. All rights reserved.</Copyright>
+
+	  <Description>A simple but reusable blazor toolbar for your Blazor application.</Description>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+	  <!-- NuGet settings -->
+	  <PackageId>Juniperr.Blazor.Toolbar</PackageId>
+	  <PackageTags>Blazor;Razor;Components;Toolbar;ASP.NET Core;CSharp;Web</PackageTags>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/jnprr/blazor-toolbar</PackageProjectUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <RepositoryUrl>https://github.com/jnprr/blazor-toolbar</RepositoryUrl>
+
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>

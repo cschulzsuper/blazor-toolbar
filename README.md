@@ -1,2 +1,2 @@
-# blazor-toolbar
-A simple but reusable blazor toolbar,
+# Juniper Blazor Toolbar
+A simple but reusable blazor toolbar for your Blazor application.
