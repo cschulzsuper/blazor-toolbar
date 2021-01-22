@@ -1,10 +1,22 @@
 ﻿<CascadingValue Value=this>
-    <ul>
-        @ChildContent
-    </ul>
+    @if (_toolbarComponents.Any())
+    {
+        <ul class="@CssClass">
+            @foreach (var toolbarComponent in _toolbarComponents)
+            {
+                <li>
+                    @toolbarComponent
+                </li>
+            }
+        </ul>
+    }
 </CascadingValue>
 
 @code {
+
+    [Parameter]
+    public int Group { get; set; } = int.MinValue;
+
     [Parameter]
     public RenderFragment ChildContent { get; set; } = null!;
 }

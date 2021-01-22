@@ -1,14 +1,14 @@
 ﻿
 @inherits ToolbarComponentBase
 
-<ToolbarComponentEnvelop>
+<ToolbarComponentWrapper>
     <div>
         <span class="@CssIcon"></span>
         <select value="@Value" @onchange="x => OnChange(x.Value)">
             @ChildContent
         </select>
     </div>
-</ToolbarComponentEnvelop>
+</ToolbarComponentWrapper>
 
 @code {
 
