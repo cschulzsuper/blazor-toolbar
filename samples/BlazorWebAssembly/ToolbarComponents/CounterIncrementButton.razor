@@ -1,0 +1,13 @@
+﻿<button class="oi oi-plus" title="Increment" @onclick="() => OnClick()"></button>
+
+@code {
+
+    [CascadingParameter]
+    public int Counter { get; set; } = 0;
+
+    public virtual void OnClick()
+    {
+        Counter++;
+        // StateHasChanged();
+    }
+}

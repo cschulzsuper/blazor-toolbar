@@ -14,27 +14,27 @@ namespace Juniperr.Blazor.Toolbar.Services
 
         public IToolbarService Clear(int group);
 
-        public IToolbarService Set<TToolbarComponent>(int position)
-            where TToolbarComponent : ToolbarComponentBase
-            => Set<TToolbarComponent>(0, position);
+        public IToolbarService Set<TComponent>(int position)
+            where TComponent : IComponent
+            => Set<TComponent>(0, position);
 
-        public IToolbarService Set<TToolbarComponent>(int position, ParameterView parameters)
-            where TToolbarComponent : ToolbarComponentBase
-            => Set<TToolbarComponent>(0, position, parameters);
+        public IToolbarService Set<TComponent>(int position, ParameterView parameters)
+            where TComponent : IComponent
+            => Set<TComponent>(0, position, parameters);
 
-        public IToolbarService Set<TToolbarComponent>(int position, IReadOnlyDictionary<string, object> parameters)
-            where TToolbarComponent : ToolbarComponentBase
-            => Set<TToolbarComponent>(0, position, parameters);
+        public IToolbarService Set<TComponent>(int position, IReadOnlyDictionary<string, object> parameters)
+            where TComponent : IComponent
+            => Set<TComponent>(0, position, parameters);
 
-        public IToolbarService Set<TToolbarComponent>(int group, int position)
-            where TToolbarComponent : ToolbarComponentBase
-            => Set<TToolbarComponent>(group, position, new Dictionary<string, object>());
+        public IToolbarService Set<TComponent>(int group, int position)
+            where TComponent : IComponent
+            => Set<TComponent>(group, position, new Dictionary<string, object>());
 
-        public IToolbarService Set<TToolbarComponent>(int group, int position, ParameterView parameters)
-            where TToolbarComponent : ToolbarComponentBase
-            => Set<TToolbarComponent>(group, position, parameters.ToDictionary());
+        public IToolbarService Set<TComponent>(int group, int position, ParameterView parameters)
+            where TComponent : IComponent
+            => Set<TComponent>(group, position, parameters.ToDictionary());
 
-        IToolbarService Set<TToolbarComponent>(int group, int position, IReadOnlyDictionary<string, object> parameters)
-            where TToolbarComponent : ToolbarComponentBase;
+        IToolbarService Set<TComponent>(int group, int position, IReadOnlyDictionary<string, object> parameters)
+            where TComponent : IComponent;
     }
 }

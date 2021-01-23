@@ -22,12 +22,13 @@ namespace Juniperr.Blazor.Toolbar.Services
             return this;
         }
 
-    public IToolbarService Set<TToolbarComponent>(int group, int position, IReadOnlyDictionary<string, object> parameters)
-            where TToolbarComponent : ToolbarComponentBase
+    public IToolbarService Set<TComponent>(int group, int position, IReadOnlyDictionary<string, object> parameters)
+            where TComponent : IComponent
         {
             var renderFragment = new RenderFragment(builder =>
             {
-                builder.OpenComponent<TToolbarComponent>(0);
+                builder.OpenElement(0,"li");
+                builder.OpenComponent<TComponent>(0);
 
                 var i = 1;
                 foreach (var (key, value) in parameters)
@@ -36,6 +37,7 @@ namespace Juniperr.Blazor.Toolbar.Services
                 }
 
                 builder.CloseComponent();
+                builder.CloseElement();
             });
 
             Added?.Invoke(group, position, renderFragment);

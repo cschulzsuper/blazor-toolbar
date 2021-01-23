@@ -1,0 +1,36 @@
+﻿
+<div>
+    <span class="oi oi-list"></span>
+    <select value="@($"{Value:yyyy-MM-dd}")" @onchange="x => OnChange(x.Value)">
+        <option value="@($"{DateTime.Today:yyyy-MM-dd}")">
+            "Today"
+        </option>
+
+        @foreach (var forecast in Forecasts)
+        {
+            @if (forecast.Date.Date != DateTime.Today)
+            {
+                <option value="@($"{forecast.Date.Date:yyyy-MM-dd}")">
+                    @forecast.Date.Date.ToShortDateString()
+                </option>
+            }
+        }
+    </select>
+</div>
+
+@code {
+
+    [Parameter] public WeatherForecast[] Forecasts { get; set; } = null!;
+    [Parameter] public DateTime Value { get; set; } = DateTime.Today;
+
+    [Inject] public NavigationManager NavigationManager { get; set; } = null!;
+
+    public virtual void OnChange(object? value)
+    {
+        var navigateUrl = value != default
+            ? $"fetch-data/{value}"
+            : "fetch-data";
+
+        NavigationManager.NavigateTo(navigateUrl);
+    }
+}

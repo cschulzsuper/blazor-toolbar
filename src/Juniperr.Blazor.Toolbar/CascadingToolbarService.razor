@@ -1,0 +1,17 @@
+﻿
+<CascadingValue Value="@ToolbarService">
+    @ChildContent
+</CascadingValue>
+
+@code {
+
+    [Parameter]
+    public IToolbarService ToolbarService { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    protected override void OnParametersSet() =>
+        ToolbarService ??= new ToolbarService();
+
+}
