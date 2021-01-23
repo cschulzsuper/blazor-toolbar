@@ -1,6 +1,8 @@
-﻿@page "/fetchdata"
+﻿@page "/fetch-data"
+@page "/fetch-data/{date:datetime}"
 
-@using BlazorServerSide.Data
+@using System.Collections.ObjectModel
+
 @inject WeatherForecastService ForecastService
 
 <h1>Weather forecast</h1>
@@ -37,10 +39,38 @@ else
 }
 
 @code {
+
+    [Parameter]
+    public DateTime? Date { get; set; }
+
+    [CascadingParameter]
+    private IToolbarService ToolbarService { get; set; }
+
     private WeatherForecast[] forecasts;
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+
+        if (Date.HasValue)
+        {
+            forecasts = forecasts
+                .Where(x => x.Date.Date == Date)
+                .ToArray();
+        }
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+
+        ToolbarService.Set<HomeLink>(0, 0);
+        ToolbarService.Set<FetchDataSelect>(1, 0,
+            new ReadOnlyDictionary<string, object>(
+                new Dictionary<string, object>
+                {
+                    [nameof(FetchDataSelect.Date)] = Date,
+                    [nameof(FetchDataSelect.Forecasts)] = forecasts
+                }));
     }
 }
