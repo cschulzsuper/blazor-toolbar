@@ -64,8 +64,8 @@ else
     {
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
 
-        ToolbarService.Set<HomeLink>(0, 0);
-        ToolbarService.Set<FetchDataSelect>(1, 0,
+        ToolbarService.Set<NavigationToolbar,HomeLink>(0);
+        ToolbarService.Set<ActionToolbar, FetchDataSelect>(0,
             new ReadOnlyDictionary<string, object>(
                 new Dictionary<string, object>
                 {

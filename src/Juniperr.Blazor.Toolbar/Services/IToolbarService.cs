@@ -6,35 +6,27 @@ namespace Juniperr.Blazor.Toolbar.Services
 {
     public interface IToolbarService
     {
-        event Action<int, int, RenderFragment>? Added;
+        public event Action<Type, int, RenderFragment>? Added;
 
-        event Action<int?>? Reset;
+        public event Action<Type?>? Reset;
 
         public IToolbarService Clear();
 
-        public IToolbarService Clear(int group);
+        public IToolbarService Clear<TToolbar>()
+            where TToolbar : Toolbar;
 
-        public IToolbarService Set<TComponent>(int position)
+        public IToolbarService Set<TToolbar, TComponent>(int position)
+            where TToolbar : Toolbar
             where TComponent : IComponent
-            => Set<TComponent>(0, position);
+            => Set<TToolbar, TComponent>(position, new Dictionary<string, object>());
 
-        public IToolbarService Set<TComponent>(int position, ParameterView parameters)
+        public IToolbarService Set<TToolbar, TComponent>(int position, ParameterView parameters)
+            where TToolbar : Toolbar
             where TComponent : IComponent
-            => Set<TComponent>(0, position, parameters);
+            => Set<TToolbar, TComponent>(position, parameters.ToDictionary());
 
-        public IToolbarService Set<TComponent>(int position, IReadOnlyDictionary<string, object> parameters)
-            where TComponent : IComponent
-            => Set<TComponent>(0, position, parameters);
-
-        public IToolbarService Set<TComponent>(int group, int position)
-            where TComponent : IComponent
-            => Set<TComponent>(group, position, new Dictionary<string, object>());
-
-        public IToolbarService Set<TComponent>(int group, int position, ParameterView parameters)
-            where TComponent : IComponent
-            => Set<TComponent>(group, position, parameters.ToDictionary());
-
-        IToolbarService Set<TComponent>(int group, int position, IReadOnlyDictionary<string, object> parameters)
+        IToolbarService Set<TToolbar, TComponent>(int position, IReadOnlyDictionary<string, object> parameters)
+            where TToolbar : Toolbar
             where TComponent : IComponent;
     }
 }

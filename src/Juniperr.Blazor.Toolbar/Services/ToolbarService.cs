@@ -6,9 +6,9 @@ namespace Juniperr.Blazor.Toolbar.Services
 {
     class ToolbarService : IToolbarService
     {
-        public event Action<int, int, RenderFragment>? Added;
+        public event Action<Type, int, RenderFragment>? Added;
 
-        public event Action<int?>? Reset;
+        public event Action<Type?>? Reset;
 
         public IToolbarService Clear()
         {
@@ -16,14 +16,16 @@ namespace Juniperr.Blazor.Toolbar.Services
             return this;
         } 
 
-        public IToolbarService Clear(int group)
+        public IToolbarService Clear<TToolbar>()
+            where TToolbar : Toolbar
         {
-            Reset?.Invoke(group);
+            Reset?.Invoke(typeof(TToolbar));
             return this;
         }
 
-    public IToolbarService Set<TComponent>(int group, int position, IReadOnlyDictionary<string, object> parameters)
-            where TComponent : IComponent
+    public IToolbarService Set<TToolbar, TComponent>(int position, IReadOnlyDictionary<string, object> parameters)
+        where TToolbar : Toolbar
+        where TComponent : IComponent
         {
             var renderFragment = new RenderFragment(builder =>
             {
@@ -40,7 +42,7 @@ namespace Juniperr.Blazor.Toolbar.Services
                 builder.CloseElement();
             });
 
-            Added?.Invoke(group, position, renderFragment);
+            Added?.Invoke(typeof(TToolbar), position, renderFragment);
 
             return this;
         }

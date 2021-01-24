@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Juniperr.Blazor.Toolbar
 {
-    public sealed partial class Toolbar : IDisposable
+    public partial class Toolbar : IDisposable
     {
         [Parameter]
         public string CssClass { get; set; } = string.Empty;
@@ -25,11 +25,12 @@ namespace Juniperr.Blazor.Toolbar
         {
             ToolbarService.Added -= HandleToolbarComponentsAdded;
             ToolbarService.Reset -= HandleToolbarComponentsReset;
+            GC.SuppressFinalize(this);
         }
 
-        private void HandleToolbarComponentsReset(int? group)
+        private void HandleToolbarComponentsReset(Type? toolbarType)
         {
-            if (group != null && group != Group)
+            if (toolbarType != null && toolbarType != GetType())
             {
                 return;
             }
@@ -38,9 +39,9 @@ namespace Juniperr.Blazor.Toolbar
             StateHasChanged();
         }
 
-        private void HandleToolbarComponentsAdded(int group, int position, RenderFragment toolbarComponent)
+        private void HandleToolbarComponentsAdded(Type toolbarType, int position, RenderFragment toolbarComponent)
         {
-            if (Group != group)
+            if (toolbarType != GetType())
             {
                 return;
             }
