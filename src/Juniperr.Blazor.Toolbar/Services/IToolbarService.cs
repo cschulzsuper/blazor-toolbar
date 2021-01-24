@@ -6,13 +6,13 @@ namespace Juniperr.Blazor.Toolbar.Services
 {
     public interface IToolbarService
     {
-        public event Action<Type, RenderFragment>? Added;
+        event Action<Type, RenderFragment>? Added;
 
-        public event Action<Type?>? Reset;
+        event Action<Type?>? Reset;
 
-        public IToolbarService Clear();
+        IToolbarService Clear();
 
-        public IToolbarService Clear<TToolbar>()
+        IToolbarService Clear<TToolbar>()
             where TToolbar : Toolbar;
 
         public IToolbarService Set<TToolbar, TComponent>()
