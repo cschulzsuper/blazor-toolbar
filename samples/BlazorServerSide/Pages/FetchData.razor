@@ -60,7 +60,7 @@ else
         }
     }
 
-    protected async override Task OnAfterRenderAsync(bool firstRender)
+    protected async override Task OnAfterRenderAsync(bool _)
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
 

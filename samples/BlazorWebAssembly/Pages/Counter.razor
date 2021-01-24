@@ -14,7 +14,7 @@
     [CascadingParameter]
     private IToolbarService ToolbarService { get; set; }
 
-    protected override void OnInitialized()
+    protected override void OnAfterRender(bool _)
     {
         ToolbarService.Set<HomeLink>(0, 0);
         ToolbarService.Set<CounterDecrementButton>(1, 0);
