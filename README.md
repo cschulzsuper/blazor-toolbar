@@ -6,6 +6,7 @@ A simple reusable toolbar for your Blazor application.
 
 ## Getting Started
 Once the first release is ready it will be available on [Nuget](https://www.nuget.org/).
+You can download a preview version [here](https://github.com/jnprr/blazor-toolbar/packages/).
 
 ## Usage
 
