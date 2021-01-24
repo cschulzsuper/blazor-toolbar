@@ -64,13 +64,14 @@ else
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
 
-        ToolbarService.Set<NavigationToolbar, HomeLink>(0);
-        ToolbarService.Set<ActionToolbar, FetchDataSelect>(0,
-            new ReadOnlyDictionary<string, object>(
-            new Dictionary<string, object>
-            {
-                [nameof(FetchDataSelect.Date)] = Date,
-                [nameof(FetchDataSelect.Forecasts)] = forecasts
-            }));
+        ToolbarService
+            .Clear()
+            .Set<NavigationToolbar, HomeLink>()
+            .Set<ActionToolbar, FetchDataSelect>(
+                new Dictionary<string, object>
+                {
+                    [nameof(FetchDataSelect.Date)] = Date,
+                    [nameof(FetchDataSelect.Forecasts)] = forecasts
+                });
     }
 }

@@ -6,7 +6,7 @@ namespace Juniperr.Blazor.Toolbar.Services
 {
     public interface IToolbarService
     {
-        public event Action<Type, int, RenderFragment>? Added;
+        public event Action<Type, RenderFragment>? Added;
 
         public event Action<Type?>? Reset;
 
@@ -15,17 +15,17 @@ namespace Juniperr.Blazor.Toolbar.Services
         public IToolbarService Clear<TToolbar>()
             where TToolbar : Toolbar;
 
-        public IToolbarService Set<TToolbar, TComponent>(int position)
+        public IToolbarService Set<TToolbar, TComponent>()
             where TToolbar : Toolbar
             where TComponent : IComponent
-            => Set<TToolbar, TComponent>(position, new Dictionary<string, object>());
+            => Set<TToolbar, TComponent>(new Dictionary<string, object>());
 
-        public IToolbarService Set<TToolbar, TComponent>(int position, ParameterView parameters)
+        public IToolbarService Set<TToolbar, TComponent>(ParameterView parameters)
             where TToolbar : Toolbar
             where TComponent : IComponent
-            => Set<TToolbar, TComponent>(position, parameters.ToDictionary());
+            => Set<TToolbar, TComponent>(parameters.ToDictionary());
 
-        IToolbarService Set<TToolbar, TComponent>(int position, IReadOnlyDictionary<string, object> parameters)
+        IToolbarService Set<TToolbar, TComponent>(IReadOnlyDictionary<string, object> parameters)
             where TToolbar : Toolbar
             where TComponent : IComponent;
     }

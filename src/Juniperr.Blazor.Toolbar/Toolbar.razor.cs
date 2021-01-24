@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Juniperr.Blazor.Toolbar.Services;
 using Microsoft.AspNetCore.Components;
 
@@ -39,15 +38,12 @@ namespace Juniperr.Blazor.Toolbar
             StateHasChanged();
         }
 
-        private void HandleToolbarComponentsAdded(Type toolbarType, int position, RenderFragment toolbarComponent)
+        private void HandleToolbarComponentsAdded(Type toolbarType, RenderFragment toolbarComponent)
         {
             if (toolbarType != GetType())
             {
                 return;
             }
-
-            while (_toolbarComponents.Count > position)
-                _toolbarComponents.Remove(_toolbarComponents.Last());
 
             _toolbarComponents.Add(toolbarComponent);
             StateHasChanged();

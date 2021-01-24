@@ -16,8 +16,11 @@
 
     protected override void OnAfterRender(bool _)
     {
-        ToolbarService.Set<NavigationToolbar, HomeLink>(0);
-        ToolbarService.Set<ActionToolbar, CounterDecrementButton>(0);
-        ToolbarService.Set<ActionToolbar, CounterIncrementButton>(1);
+        ToolbarService
+            .Clear()
+            .Set<NavigationToolbar, HomeLink>()
+            .Set<ActionToolbar, CounterDecrementButton>()
+            .Set<ActionToolbar, CounterIncrementButton>();
+
     }
 }
