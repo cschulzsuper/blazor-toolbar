@@ -5,7 +5,7 @@ A simple reusable toolbar for your Blazor application.
 [![Nuget](https://img.shields.io/github/v/release/jnprr/blazor-toolbar?sort=semver)](https://github.com/jnprr/blazor-toolbar/packages/)
 
 ## Getting Started
-Once the first release is ready it will be available on [Nuget](https://www.nuget.org/).
+Once the first release is ready it will be available on [Nuget](https://www.nuget.org/).  
 You can download a preview version [here](https://github.com/jnprr/blazor-toolbar/packages/).
 
 ## Usage
@@ -52,19 +52,15 @@ You don't need to add any code in the toolbar itself. The new type is later used
 ### Create a Toolbar Component
 
 Add a new Razor component to your project, which is later used as element in the Toolbar.
-In this example a simple link ist generated.
 
 ```razor
-
 <button class="oi oi-plus" title="Increment counter" @onclick="OnClick"></button>
 
 @code {
-
     private void OnClick() {
         // removed for brevity 
     }  
 }
-
 ```
 
 ### Set the created Toolbar Component on a Page
