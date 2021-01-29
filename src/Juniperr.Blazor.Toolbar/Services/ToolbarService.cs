@@ -29,7 +29,6 @@ namespace Juniperr.Blazor.Toolbar.Services
         {
             var renderFragment = new RenderFragment(builder =>
             {
-                builder.OpenElement(0, "li");
                 builder.OpenComponent<TComponent>(0);
 
                 var i = 1;
@@ -39,7 +38,6 @@ namespace Juniperr.Blazor.Toolbar.Services
                 }
 
                 builder.CloseComponent();
-                builder.CloseElement();
             });
 
             Added?.Invoke(typeof(TToolbar), renderFragment);

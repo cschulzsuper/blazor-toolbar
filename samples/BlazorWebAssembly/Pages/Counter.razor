@@ -4,7 +4,11 @@
 
 <p>Current count: @ViewModel.CounterValue</p>
 
-<button class="btn btn-primary" @onclick="ViewModel.IncrementCounter">Click me</button>
+<div class="row">
+    <button class="btn btn-primary mr-1" @onclick="ViewModel.IncrementCounter">Click me</button>
+    <CounterDecrementButton />
+    <CounterIncrementButton />
+</div>
 
 @code {
 

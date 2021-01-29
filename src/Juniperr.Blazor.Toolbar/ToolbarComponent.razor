@@ -1,0 +1,22 @@
+﻿
+@if (ParentToolbar == null)
+{
+    <div>
+        @ChildContent
+    </div>
+}
+else
+{
+    <li>
+        @ChildContent
+    </li>
+}
+
+@code {
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [CascadingParameter]
+    public Toolbar? ParentToolbar { get; set; } = null;
+}

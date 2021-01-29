@@ -1,0 +1,82 @@
+﻿div ::deep a,
+div ::deep button,
+div ::deep div {
+    height: fit-content;
+    display: inline-block;
+    color: #212529;
+    background-color: #f8f9fa;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    margin: .25rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+li ::deep a,
+li ::deep button,
+li ::deep div {
+    height: fit-content;
+    display: inline-block;
+    color: #212529;
+    background-color: transparent;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+    div ::deep a:not(:disabled):not(.disabled),
+    div ::deep button:not(:disabled):not(.disabled),
+    div ::deep div:not(:disabled):not(.disabled),
+    li ::deep a:not(:disabled):not(.disabled),
+    li ::deep button:not(:disabled):not(.disabled),
+    li ::deep div:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    div ::deep a:hover,
+    div ::deep button:hover,
+    div ::deep select:hover,
+    li ::deep a:hover,
+    li ::deep button:hover,
+    li ::deep div:hover {
+        color: #212529;
+        background-color: #e2e6ea;
+        border-color: #dae0e5;
+        text-decoration: none;
+    }
+
+    div ::deep a:focus,
+    div ::deep button:focus,
+    div ::deep select:focus,
+    li ::deep a:focus,
+    li ::deep button:focus,
+    li ::deep select:focus {
+        outline: 0;
+    }
+
+    div ::deep a:active,
+    div ::deep button:active,
+    div ::deep select:active,
+    li ::deep a:active,
+    li ::deep button:active,
+    li ::deep select:active {
+        color: #212529;
+        background-color: #dae0e5;
+        border-color: #d3d9df;
+        box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, .5);
+    }

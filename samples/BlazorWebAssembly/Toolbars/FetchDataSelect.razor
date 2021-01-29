@@ -1,24 +1,25 @@
-﻿
-<div>
-    <span class="oi oi-list"></span>
-    <select value="@(Date == null ? string.Empty : $"{Date:yyyy-MM-dd}")" @onchange="x => OnChange(x.Value)">
-        <option value="@(string.Empty)">
-            ---
-        </option>
-        @if (Forecasts.Any())
-        {
-            @foreach (var forecast in Forecasts)
+﻿<ToolbarComponent>
+    <div>
+        <span class="oi oi-list"></span>
+        <select value="@(Date == null ? string.Empty : $"{Date:yyyy-MM-dd}")" @onchange="x => OnChange(x.Value)">
+            <option value="@(string.Empty)">
+                ---
+            </option>
+            @if (Forecasts.Any())
             {
-                @if (forecast.Date.Date != DateTime.Today)
+                @foreach (var forecast in Forecasts)
                 {
-                    <option value="@($"{forecast.Date.Date:yyyy-MM-dd}")">
-                        @forecast.Date.Date.ToShortDateString()
-                    </option>
+                    @if (forecast.Date.Date != DateTime.Today)
+                    {
+                        <option value="@($"{forecast.Date.Date:yyyy-MM-dd}")">
+                            @forecast.Date.Date.ToShortDateString()
+                        </option>
+                    }
                 }
             }
-        }
-    </select>
-</div>
+        </select>
+    </div>
+</ToolbarComponent>
 
 @code {
 
