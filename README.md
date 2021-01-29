@@ -54,7 +54,9 @@ You don't need to add any code in the toolbar itself. The new type is later used
 Add a new Razor component to your project, which is later used as element in the Toolbar.
 
 ```razor
-<button class="oi oi-plus" title="Increment counter" @onclick="OnClick"></button>
+<ToolbarComponent>
+    <button class="oi oi-plus" title="Increment counter" @onclick="OnClick"></button>
+</ToolbarComponent>
 
 @code {
     private void OnClick() {
