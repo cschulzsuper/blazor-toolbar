@@ -6,6 +6,7 @@
     border-radius: .25rem !important;
     background-color: #f8f9fa;
     list-style: none;
+    height: fit-content;
 }
 
     ul ::deep li a {

@@ -1,7 +1,6 @@
 ﻿div ::deep a,
 div ::deep button,
 div ::deep div {
-    height: fit-content;
     display: inline-block;
     color: #212529;
     background-color: #f8f9fa;
@@ -13,7 +12,6 @@ div ::deep div {
     user-select: none;
     border: 1px solid transparent;
     padding: .375rem .75rem;
-    margin: .25rem;
     font-size: 1rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -22,7 +20,6 @@ div ::deep div {
 li ::deep a,
 li ::deep button,
 li ::deep div {
-    height: fit-content;
     display: inline-block;
     color: #212529;
     background-color: transparent;
