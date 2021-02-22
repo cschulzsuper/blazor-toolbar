@@ -17,11 +17,10 @@
 	  <PackageTags>Blazor;Razor;Components;Toolbar;ASP.NET Core;CSharp;Web</PackageTags>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageProjectUrl>https://github.com/jnprr/blazor-toolbar</PackageProjectUrl>
+	  <PackageIcon>icon.png</PackageIcon>
 	  <RepositoryType>git</RepositoryType>
 	  <RepositoryUrl>https://github.com/jnprr/blazor-toolbar</RepositoryUrl>
-
   </PropertyGroup>
-
   
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -35,4 +34,8 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+	
 </Project>
