@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Juniperr.Blazor.Toolbar\Juniperr.Blazor.Toolbar.csproj" />
+    <ProjectReference Include="..\..\src\Super.Blazor.Toolbar\Super.Blazor.Toolbar.csproj" />
   </ItemGroup>
 
 </Project>

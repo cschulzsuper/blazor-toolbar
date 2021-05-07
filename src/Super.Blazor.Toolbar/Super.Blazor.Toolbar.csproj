@@ -13,13 +13,13 @@
 	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
 	  <!-- NuGet settings -->
-	  <PackageId>Juniperr.Blazor.Toolbar</PackageId>
+	  <PackageId>Super.Blazor.Toolbar</PackageId>
 	  <PackageTags>Blazor;Razor;Components;Toolbar;ASP.NET Core;CSharp;Web</PackageTags>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <PackageProjectUrl>https://github.com/jnprr/blazor-toolbar</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/cschulzsuper/blazor-toolbar</PackageProjectUrl>
 	  <PackageIcon>icon.png</PackageIcon>
 	  <RepositoryType>git</RepositoryType>
-	  <RepositoryUrl>https://github.com/jnprr/blazor-toolbar</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/cschulzsuper/blazor-toolbar</RepositoryUrl>
   </PropertyGroup>
   
   <ItemGroup>

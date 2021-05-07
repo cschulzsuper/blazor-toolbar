@@ -5,13 +5,18 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{24A8AA10-00A3-4E48-8A52-6CF0695872F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Juniperr.Blazor.Toolbar", "src\Juniperr.Blazor.Toolbar\Juniperr.Blazor.Toolbar.csproj", "{22079BDE-38CA-4446-AAF5-712B69303028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Super.Blazor.Toolbar", "src\Super.Blazor.Toolbar\Super.Blazor.Toolbar.csproj", "{22079BDE-38CA-4446-AAF5-712B69303028}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{2FACEB3C-73C4-4926-AFE2-2DAE8F276485}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerSide", "samples\BlazorServerSide\BlazorServerSide.csproj", "{70D9B092-273D-47F4-9CD5-5F8A2A1B74B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssembly", "samples\BlazorWebAssembly\BlazorWebAssembly.csproj", "{4C6F4937-8BA8-46EF-8F9A-0A3CD661BE6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2AF573E1-0794-47D6-B204-C1D27E3B7907}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

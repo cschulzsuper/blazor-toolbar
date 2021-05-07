@@ -1,12 +1,12 @@
-# Juniper Blazor Toolbar
+# Super Blazor Toolbar
 A simple reusable toolbar for your Blazor application.
 
-[![Build](https://img.shields.io/github/workflow/status/jnprr/blazor-toolbar/Deploy%20Master)](https://github.com/jnprr/blazor-toolbar/actions?query=workflow%3A"Deploy+Master")
-[![Nuget](https://img.shields.io/github/v/release/jnprr/blazor-toolbar?sort=semver)](https://github.com/jnprr/blazor-toolbar/packages/)
+[![Build](https://img.shields.io/github/workflow/status/cschulzsuper/blazor-toolbar/Deploy%20Master)](https://github.com/cschulzsuper/blazor-toolbar/actions?query=workflow%3A"Deploy+Master")
+[![Nuget](https://img.shields.io/github/v/release/cschulzsuper/blazor-toolbar?sort=semver)](https://github.com/cschulzsuper/blazor-toolbar/packages/)
 
 ## Getting Started
 Once the first release is ready it will be available on [Nuget](https://www.nuget.org/).  
-You can download a preview version [here](https://github.com/jnprr/blazor-toolbar/packages/).
+You can download a preview version [here](https://github.com/cschulzsuper/blazor-toolbar/packages/).
 
 ## Usage
 
@@ -15,8 +15,8 @@ You can download a preview version [here](https://github.com/jnprr/blazor-toolba
 Add the following lines to your *_Imports.razor*.
 
 ```razor
-@using Juniperr.Blazor.Toolbar
-@using Juniperr.Blazor.Toolbar.Services
+@using Super.Blazor.Toolbar
+@using Super.Blazor.Toolbar.Services
 ```
 
 ### Add the CascadingToolbarService

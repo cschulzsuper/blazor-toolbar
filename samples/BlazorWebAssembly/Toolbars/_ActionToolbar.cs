@@ -1,4 +1,4 @@
-﻿using Juniperr.Blazor.Toolbar;
+﻿using Super.Blazor.Toolbar;
 
 namespace BlazorWebAssembly.Toolbars
 {
