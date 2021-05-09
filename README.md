@@ -5,8 +5,7 @@ A simple reusable toolbar for your Blazor application.
 [![Nuget](https://img.shields.io/github/v/release/cschulzsuper/blazor-toolbar?sort=semver)](https://github.com/cschulzsuper/blazor-toolbar/packages/)
 
 ## Getting Started
-Once the first release is ready it will be available on [Nuget](https://www.nuget.org/).  
-You can download a preview version [here](https://github.com/cschulzsuper/blazor-toolbar/packages/).
+The package is available on [Nuget](https://www.nuget.org/packages/Supercode.Blazor.Toolbar/).  
 
 ## Usage
 
