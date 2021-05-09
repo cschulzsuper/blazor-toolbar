@@ -1,4 +1,4 @@
-# Super Blazor Toolbar
+# Blazor Toolbar
 A simple reusable toolbar for your Blazor application.
 
 [![Build](https://img.shields.io/github/workflow/status/cschulzsuper/blazor-toolbar/Deploy%20Master)](https://github.com/cschulzsuper/blazor-toolbar/actions?query=workflow%3A"Deploy+Master")
@@ -15,8 +15,8 @@ You can download a preview version [here](https://github.com/cschulzsuper/blazor
 Add the following lines to your *_Imports.razor*.
 
 ```razor
-@using Super.Blazor.Toolbar
-@using Super.Blazor.Toolbar.Services
+@using Supercode.Blazor.Toolbar
+@using Supercode.Blazor.Toolbar.Services
 ```
 
 ### Add the CascadingToolbarService

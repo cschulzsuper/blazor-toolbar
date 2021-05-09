@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
       <TargetFramework>net5.0</TargetFramework>
@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Super.Blazor.Toolbar\Super.Blazor.Toolbar.csproj" />
+    <ProjectReference Include="..\..\src\Supercode.Blazor.Toolbar\Supercode.Blazor.Toolbar.csproj" />
   </ItemGroup>
 
 </Project>

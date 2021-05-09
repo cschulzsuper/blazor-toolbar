@@ -9,7 +9,7 @@ on:
       - master
 
 env:
-    PROJECT_NAME: Super.Blazor.Toolbar
+    PROJECT_NAME: Supercode.Blazor.Toolbar
 
 jobs:
   build:

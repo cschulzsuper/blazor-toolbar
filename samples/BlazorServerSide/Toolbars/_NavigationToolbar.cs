@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Super.Blazor.Toolbar;
+using Supercode.Blazor.Toolbar;
 
 namespace BlazorServerSide.Toolbars
 {

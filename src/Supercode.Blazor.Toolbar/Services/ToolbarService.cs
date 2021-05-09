@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Components;
 
-namespace Super.Blazor.Toolbar.Services
+namespace Supercode.Blazor.Toolbar.Services
 {
     class ToolbarService : IToolbarService
     {

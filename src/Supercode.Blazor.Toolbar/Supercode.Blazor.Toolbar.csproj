@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
       <TargetFramework>net5.0</TargetFramework>
@@ -13,7 +13,7 @@
 	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
 	  <!-- NuGet settings -->
-	  <PackageId>Super.Blazor.Toolbar</PackageId>
+	  <PackageId>Supercode.Blazor.Toolbar</PackageId>
 	  <PackageTags>Blazor;Razor;Components;Toolbar;ASP.NET Core;CSharp;Web</PackageTags>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageProjectUrl>https://github.com/cschulzsuper/blazor-toolbar</PackageProjectUrl>

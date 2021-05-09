@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Super.Blazor.Toolbar.Services;
+using Supercode.Blazor.Toolbar.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace Super.Blazor.Toolbar
+namespace Supercode.Blazor.Toolbar
 {
     public partial class Toolbar : IDisposable
     {

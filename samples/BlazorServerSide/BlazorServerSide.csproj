@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Super.Blazor.Toolbar\Super.Blazor.Toolbar.csproj" />
+    <ProjectReference Include="..\..\src\Supercode.Blazor.Toolbar\Supercode.Blazor.Toolbar.csproj" />
   </ItemGroup>
 
 </Project>

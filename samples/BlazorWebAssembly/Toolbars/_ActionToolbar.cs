@@ -1,4 +1,4 @@
-﻿using Super.Blazor.Toolbar;
+﻿using Supercode.Blazor.Toolbar;
 
 namespace BlazorWebAssembly.Toolbars
 {
