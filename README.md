@@ -1,4 +1,4 @@
-# Blazor Toolbar
+# Toolbar
 A simple reusable toolbar for your Blazor application.
 
 [![Build](https://img.shields.io/github/workflow/status/cschulzsuper/blazor-toolbar/Deploy%20Master)](https://github.com/cschulzsuper/blazor-toolbar/actions?query=workflow%3A"Deploy+Master")
@@ -76,7 +76,7 @@ Set a Toolbar Component by calling `Set` with the type of your Toolbar and your 
 
     protected override void OnAfterRender(bool _)
     {
-        BreadcrumbService
+        ToolbarService
             .Clear()
             .Set<ActionToolbar, IncrementCounterButton>();
     }
